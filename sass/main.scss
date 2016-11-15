@@ -1,1 +1,10 @@
 @import 'template';
+
+html {
+  font-size: 1em;
+}
+
+#page-head h1 {
+  margin-left: .5em;
+  color: $hex-prime2;
+}
