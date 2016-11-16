@@ -11,13 +11,38 @@
     <link rel="author" href="humans.txt">
   </head>
   <body>
-    <header id="page-head">
+    <header id="page-head" class="container-fluid">
       <h1>Orchard</h1>
     </header>
-    <main id="wrapper">
-      
+    <main id="wrapper" class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <span class="col-md-6">
+            <input type="text" class="form-control" id="pearHt" placeholder="Pear Tree Growth per Second, cm">
+          </span>
+          <span class="col-md-6">
+            <input type="text" class="form-control" id="oakHt" placeholder="Oak Tree Growth per Second, cm">
+          </span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <span class="col-md-6">
+            <input type="text" class="form-control" id="timer" placeholder="Total Growth Cycle, Seconds">
+          </span>
+          <span class="col-md-6">
+            <button class="btn btn-default" id="grower">Grow!</button>
+          </span>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1" id="insertHere">
+          
+        </div>
+      </div>      
     </main>
-    <footer id="page-foot">
+    <footer id="page-foot" class="container-fluid">
       <p>&copy; 2016 leafBRANCH</p>
     </footer>
     <script src="dist/js/jquery.min.js"></script>

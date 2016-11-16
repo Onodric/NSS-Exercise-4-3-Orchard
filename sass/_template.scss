@@ -46,10 +46,9 @@ body {
   width: 90%;
   max-width: 1280px;
   background: $hex-prime4;
-  padding: 8em 2.5% 2em 2.5%;
-  height: 100vh;
+  height: 85vh;
   overflow-y: auto;
-  margin: 0 auto;
+  margin: 10vh auto 5vh auto;
 
   h1, h2, h3, h4, h5 {
     font-family: $hw-head-stack;

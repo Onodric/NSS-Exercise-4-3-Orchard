@@ -5,6 +5,11 @@ html {
 }
 
 #page-head h1 {
+  z-index: 100;
   margin-left: .5em;
   color: $hex-prime2;
+}
+
+#wrapper {
+  z-index: -1;
 }

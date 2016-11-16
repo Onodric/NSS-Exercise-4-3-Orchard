@@ -20,6 +20,7 @@ Plant.Tree = function(){
 // 1. Tree should have a property of `branches`.
   this.branches = 0;
   this.heightSinceLastBranch = 0;
+  this.grows = 0;
 
 // 1. The Tree prototype should have two methods on it: `grow` and `trim`.
 
@@ -28,16 +29,21 @@ Plant.Tree = function(){
 // 1. The `grow` method should increase the height of the tree.
     this.increaseHeight(int);
     this.heightSinceLastBranch += int;
+    this.grows++;
 // 1. Each time the height of a tree increases by 10, the value of `branch` should increase by one.
-    while(this.heightSinceLastBranch > 10){
+    while(this.heightSinceLastBranch >= 10){
       this.branches++;
       this.heightSinceLastBranch -= 10;
     }
-    this.heightSinceLastBranch = 0;
+    if (this.grows % 10 === 0){
+// 1. Every tenth time the trees are grown, invoke the `trim` method. Pass one value to the method for the pear tree, and a larger value to the method on the oak tree.
+      this.trim(Math.floor(int * 1.25));
+    }
   };
 
 // 1. The `trim` method should accept an integer value as input.
   this.trim = function (int) {
+console.log("Trim: ", this);
 // 1. The `trim` method should decrease the height of the tree.
     this.decreaseHeight(int);
 // 1. When the `trim` method is called, the number of branches should decrease by one.
@@ -49,21 +55,4 @@ Plant.Tree = function(){
 // 1. Plant should be the prototype of Tree.
 Plant.Tree.prototype = new Plant();
 
-//     ```js
-//     Tree.prototype.grow = function (amount) {
-
-//     }
-//     ```
-// 1. Create a PearTree instance of Tree. `var PearTree = new Tree();`
-// 1. Create an OakTree instance of Tree.
-// 1. Every second, increase the height the pear tree by some integer value and increase the height the oak tree by some integer value that is **larger** than what you used for the pear tree.
-// 1. Also output the current height of each tree and how many branches it has to the DOM.
-
-//     > Pear tree is now 23cm tall and has 2 branches
-//     > 
-//     > Oak tree is now 57cm tall and has 4 branches
-
-// 1. Every tenth time the trees are grown, invoke the `trim` method. Pass one value to the method for the pear tree, and a larger value to the method on the oak tree.
-// 1. Stop growing the trees after they have grown 30 times.
-
-// ![Orchard Simulation](orchard.gif)
+module.exports = Plant.Tree;
