@@ -43,7 +43,6 @@ Plant.Tree = function(){
 
 // 1. The `trim` method should accept an integer value as input.
   this.trim = function (int) {
-console.log("Trim: ", this);
 // 1. The `trim` method should decrease the height of the tree.
     this.decreaseHeight(int);
 // 1. When the `trim` method is called, the number of branches should decrease by one.

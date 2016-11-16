@@ -22,7 +22,6 @@ function growThemTrees () {
 //   > Oak tree is now 57cm tall and has 4 branches
   $ADDTODOM.append('<p>Cycle ' + (counter+1) + ' | Pear tree is now ' + PearTree.height + 'cm tall and has ' + PearTree.branches + ' branches.</p><p>        Oak tree is now ' + OakTree.height + 'cm tall and has ' + OakTree.branches + ' branches.</p>');
   counter++;
-  console.log("counter: ", counter);
   if (counter >= parseInt($DURATION.val())){
 // 1. Stop growing the trees after they have grown 30 times.
     stopGrow();
@@ -38,8 +37,3 @@ $('#grower').click(function (event) {
   intervalId = setInterval(function(){
     growThemTrees();} , 1000);
 });
-
-console.log("Pear: ", PearTree);
-console.log("Oak: ", OakTree);
-
-
